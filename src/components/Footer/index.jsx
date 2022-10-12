@@ -1,5 +1,6 @@
 import Logo from "../../assets/logoWhite.svg"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 //Création des différents composants avec "styled-components"
 const MyFooter = styled.footer`
@@ -14,17 +15,21 @@ const MyFooter = styled.footer`
 const Copyright = styled.p`
   color: white;
   font-size: 24px;
+  font-weight: 500;
   padding-bottom: 30px;
 `
 const HomeLogo = styled.img`
-  width: 122px;
   padding-top: 66px;
 `
-//Fonction du Footer
+//Composant Footer
 function Footer() {
   return (
     <MyFooter>
-      <HomeLogo src={Logo} alt="Logo Kasa" />
+      {/*Logo*/}
+      <Link to={"/"}>
+        <HomeLogo src={Logo} alt="Logo Kasa" />
+      </Link>
+
       <Copyright>© 2020 Kasa. All rights reserved</Copyright>
     </MyFooter>
   )
