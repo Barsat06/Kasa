@@ -9,7 +9,8 @@ const MyFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 209px;
+  height: 143px;
+  padding-top: 66px;
 `
 
 const Copyright = styled.p`
@@ -18,16 +19,14 @@ const Copyright = styled.p`
   font-weight: 500;
   padding-bottom: 30px;
 `
-const HomeLogo = styled.img`
-  padding-top: 66px;
-`
+
 //Composant Footer
 function Footer() {
   return (
     <MyFooter>
       {/*Logo*/}
       <Link to={"/"}>
-        <HomeLogo src={Logo} alt="Logo Kasa" />
+        <img src={Logo} alt="Logo Kasa" />
       </Link>
 
       <Copyright>© 2020 Kasa. All rights reserved</Copyright>

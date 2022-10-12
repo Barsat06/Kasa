@@ -1,5 +1,9 @@
+:root {
+  --primary-color: #ff6060;
+}
+
 .styledLink {
-  color: #ff6060;
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
