@@ -5,12 +5,14 @@ import "./utils/styles/reset.css"
 import "./utils/styles/styles.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Error from './components/Error'
+import Error from "./components/Error"
+import Home from "./pages/Home"
 
 ReactDOM.render(
   <BrowserRouter>
     <Header />
     <Routes>
+      <Route exact path="/" element={<Home />} />
       <Route path="*" element={<Error />} />
     </Routes>
     <Footer />
