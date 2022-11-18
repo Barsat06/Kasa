@@ -49,7 +49,7 @@ const CardTitle = styled.h3`
 //Composant Card
 function Card({ cover, title, id }) {
   return (
-    <CardWrapper to={id}>
+    <CardWrapper to={"/locations/" + id}>
       <CardCover src={cover} alt={"Lien vers" + title} />
       <CardTitle>{title}</CardTitle>
     </CardWrapper>

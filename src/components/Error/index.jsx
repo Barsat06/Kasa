@@ -1,10 +1,9 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import colors from "../../utils/styles/colors"
 
 //Création des différents composants avec "styled-components"
 const ErrorWrapper = styled.div`
-  color: ${colors.primary};
+  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -22,18 +22,21 @@ function Header() {
 
       <nav>
         {/* Lien Accueil */}
-        <NavLink className={"styledLink"}
+        <NavLink
+          className={"styledLink"}
           style={({ isActive }) => {
             return {
               textDecoration: isActive ? "underline" : "none",
             }
           }}
-          to="/" end          
+          to="/"
+          end
         >
           Accueil
         </NavLink>
         {/* Lien A Propos */}
-        <NavLink className={"styledLink"}
+        <NavLink
+          className={"styledLink"}
           style={({ isActive }) => {
             return {
               textDecoration: isActive ? "underline" : "none",
