@@ -1,42 +1,19 @@
 import styled from "styled-components"
 import Card from "../../components/Card/index"
+import PageTop from "../../components/PageTop"
 import img from "../../assets/imgHome.png"
 import { useState, useEffect } from "react"
 
 //Création des différents composants avec "styled-components"
 const HomeWrapper = styled.main`
-  margin: 40px auto;
+  margin: 0 auto;
   max-width: 1240px;
   display: flex;
   flex-direction: column;
   gap: 45px;
-  padding: 0px 100px;
+  padding: 0 100px 100px 100px;
 `
 
-const Title = styled.div`
-  border-radius: 25px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.15);
-
-  h1 {
-    font-weight: 500;
-    font-size: 48px;
-    color: white;
-    position: absolute;
-    z-index: 1;
-  }
-
-  img {
-    mix-blend-mode: darken;
-    height: 225px;
-    width: 1240px;
-    object-fit: cover;
-    object-position: 50% 43%;
-  }
-`
 const CardContainer = styled.div`
   border-radius: 25px;
   display: flex;
@@ -61,10 +38,7 @@ function Home() {
   //Affichage des locations(Card)
   return (
     <HomeWrapper>
-      <Title>
-        <h1>Chez vous, partout et ailleurs</h1>
-        <img src={img} alt="" />
-      </Title>
+      <PageTop image={img} text="Chez vous, partout et ailleurs" />
       <CardContainer>
         {logements.map((logements) => (
           <Card
