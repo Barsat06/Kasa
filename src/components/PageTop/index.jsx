@@ -24,9 +24,33 @@ const MyWrapper = styled.div`
     object-fit: cover;
     object-position: 50% 43%;
   }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 168px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    height: 111px;
+
+    h1 {
+      justify-content: right;
+      margin: 0 110px 0 40px;
+    }
+  }
 `
 
-function PageTop({image, text}) {
+//Composant PageTop
+function PageTop({ image, text }) {
   return (
     <MyWrapper>
       <h1>{text}</h1>

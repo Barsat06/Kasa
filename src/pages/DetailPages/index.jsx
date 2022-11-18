@@ -14,8 +14,7 @@ const DetailWrapper = styled.div`
   padding: 0px 100px;
 
   .texts {
-    margin-top: 30px;
-    margin-bottom: 25px;
+    margin: 30px 0;
     display: flex;
     justify-content: space-between;
   }
@@ -53,6 +52,48 @@ const DetailWrapper = styled.div`
 
     div {
       flex: 1;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .texts {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    .leftCol {
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .rightCol {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 16px 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    padding: 20px;
+
+    .collapsable {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .leftCol {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
     }
   }
 `

@@ -6,6 +6,15 @@ const Rating = styled.div`
   margin-top: 20px;
   display: flex;
   gap: 10px;
+
+  @media screen and (max-width: 425px) {
+    margin: 8.5px 0;
+    gap: 5px;
+
+    img {
+      width: 15px;
+    }
+  }
 `
 
 //Composant Star

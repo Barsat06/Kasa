@@ -16,6 +16,12 @@ const Content = styled.div`
   color: var(--primary-color);
   font-size: 18px;
   line-height: 26px;
+
+  @media screen and (max-width: 425px) {
+    padding: 20px 10px;
+    font-size: 12px;
+    line-height: 17px;
+  }
 `
 
 const MyTitle = styled.div`
@@ -39,6 +45,19 @@ const MyTitle = styled.div`
     flex: 1;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 6px 12px;
+    line-height: 19px;
+
+    img {
+      width: 15px;
+    }
+
+    h3 {
+      font-size: 13px;
+    }
   }
 `
 

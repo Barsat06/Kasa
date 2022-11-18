@@ -12,6 +12,11 @@ const HomeWrapper = styled.main`
   flex-direction: column;
   gap: 45px;
   padding: 0 100px 100px 100px;
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+  }
 `
 
 const CardContainer = styled.div`
@@ -21,7 +26,13 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   gap: 50px 60px;
   background: var(--secondary-color);
-  padding: 55px 0;
+  padding: 55px 42px;
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+    background: white;
+    padding: 0;
+  }
 `
 
 //Page Home

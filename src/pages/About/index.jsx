@@ -4,7 +4,7 @@ import Collapse from "../../components/Collapse"
 import img from "../../assets/imgAbout.png"
 
 const AboutWrapper = styled.div`
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 1240px;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,17 @@ const AboutWrapper = styled.div`
     flex-direction: column;
     margin: 30px 100px 0 100px;
     gap: 30px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .collapsable {
+      margin: 30px 0 0 0;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px 20px 20px;
   }
 `
 

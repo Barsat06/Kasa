@@ -18,6 +18,11 @@ const Copyright = styled.p`
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 12px;
+    padding-bottom: 60px;
+  }
 `
 
 //Composant Footer

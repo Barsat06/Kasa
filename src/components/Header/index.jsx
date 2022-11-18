@@ -9,6 +9,15 @@ const MyHeader = styled.header`
   justify-content: space-between;
   height: 130px;
   padding: 0px 100px;
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    padding: 15px;
+
+    img {
+      width: 145px;
+    }
+  }
 `
 
 //Composant Header

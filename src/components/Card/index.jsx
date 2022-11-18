@@ -27,11 +27,16 @@ const CardWrapper = styled(Link)`
       rgba(0, 0, 0, 0.5) 100%
     );
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 255px;
+    width: 100%;
+  }
 `
 
 const CardCover = styled.img`
-  height: 340px;
-  width: 340px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
 `

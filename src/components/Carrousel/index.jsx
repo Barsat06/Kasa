@@ -35,12 +35,36 @@ const MyCarrousel = styled.div`
   }
 
   .imgCounter {
-    color: #ffffff;
+    color: white;
     font-weight: 500;
     font-size: 18px;
     position: absolute;
     bottom: 25px;
     left: 48.7%;
+  }
+
+  @media screen and (max-width: 425px) {
+    .carrouselImg {
+      height: 255px;
+    }
+
+    .arrow {
+      height: 20px;
+    }
+
+    .prevArrow {
+      top: 46%;
+      left: 5px;
+    }
+
+    .nextArrow {
+      top: 46%;
+      right: 5px;
+    }
+
+    .imgCounter {
+      display: none;
+    }
   }
 `
 

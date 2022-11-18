@@ -11,7 +11,6 @@ const MyHost = styled.div`
     line-height: 143%;
     font-size: 18px;
     text-align: right;
-
   }
 
   img {
@@ -20,6 +19,17 @@ const MyHost = styled.div`
     border-radius: 50%;
     object-fit: cover;
     margin-left: 10px;
+  }
+
+  @media screen and (max-width: 425px) {
+    p {
+      font-size: 12px;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
   }
 `
 
