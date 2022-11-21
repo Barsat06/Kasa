@@ -5,9 +5,9 @@ import img from "../../assets/imgHome.png"
 import { useState, useEffect } from "react"
 
 //Création des différents composants avec "styled-components"
-const HomeWrapper = styled.main`
+const HomeWrapper = styled.div`
   margin: 0 auto;
-  max-width: 1240px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   gap: 45px;

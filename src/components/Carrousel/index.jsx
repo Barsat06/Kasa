@@ -13,6 +13,10 @@ const MyCarrousel = styled.div`
     object-fit: cover;
   }
 
+  .oneImage {
+    display: none;
+  }
+
   .arrow {
     transition: all 0.15s ease-out;
 
@@ -95,13 +99,13 @@ function Carrousel(images) {
       <img
         src={PrevArrow}
         alt="Précedent"
-        className="prevArrow arrow"
+        className={nbOfImage < 2 ? "oneImage" : "prevArrow arrow"}
         onClick={prevImg}
       />
       <img
         src={NextArrow}
         alt="Suivant"
-        className="nextArrow arrow"
+        className={nbOfImage < 2 ? "oneImage" : "nextArrow arrow"}
         onClick={nextImg}
       />
 

@@ -103,6 +103,8 @@ section {
 }
 body {
   line-height: 1;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 ol,
 ul {
@@ -124,9 +126,25 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #ff6060;
   --secondary-color: #f7f7f7;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+#content {
+  flex: 1;
+  width: 100%;
 }
 
 .styledLink {

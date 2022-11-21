@@ -9,10 +9,13 @@ const MyHeader = styled.header`
   justify-content: space-between;
   height: 130px;
   padding: 0px 100px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
 
   @media screen and (max-width: 768px) {
     height: 100%;
-    padding: 15px;
+    padding: 20px;
 
     img {
       width: 145px;

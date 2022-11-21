@@ -5,7 +5,7 @@ import img from "../../assets/imgAbout.png"
 
 const AboutWrapper = styled.div`
   margin: 0 auto;
-  max-width: 1240px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   padding: 0 100px 100px 100px;

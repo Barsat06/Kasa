@@ -9,7 +9,7 @@ const MyFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 143px;
+  height: 209px;
   padding-top: 66px;
 `
 

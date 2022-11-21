@@ -21,14 +21,26 @@ const Rating = styled.div`
 function Star(note) {
   const nbOfStar = parseInt(note.note)
   const nbOfGreyStar = 5 - nbOfStar
+  let starOn = new Array(nbOfStar)
+  let StarOff = new Array(nbOfGreyStar)
 
   return (
     <Rating>
-      {[1, 2, 3].map(() => (
-        <img src={star} alt={nbOfStar + "étoiles sur 5"} />
+      {/* Crée un Array (qu'on peut .map) en fonction du
+      nombre d'itération (égale au nombre d'étoile) */}
+      {Array.from(starOn.keys()).map((index) => (
+        <img
+          src={star}
+          alt={nbOfStar + " étoiles sur 5"}
+          key={"pink" + index}
+        />
       ))}
-      {[1, 2].map(() => (
-        <img src={greyStar} alt={nbOfStar + "étoiles sur 5"} />
+      {Array.from(StarOff.keys()).map((index) => (
+        <img
+          src={greyStar}
+          alt={nbOfStar + " étoiles sur 5"}
+          key={"grey" + index}
+        />
       ))}
     </Rating>
   )

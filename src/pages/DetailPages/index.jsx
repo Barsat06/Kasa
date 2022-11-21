@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import Tag from "../../components/Tags"
 import Host from "../../components/Host"
@@ -9,8 +9,9 @@ import Collapse from "../../components/Collapse"
 
 //Stylisation de la page
 const DetailWrapper = styled.div`
-  max-width: 1240px;
-  margin: 40px auto;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto 40px;
   padding: 0px 100px;
 
   .texts {
@@ -106,18 +107,32 @@ function DetailPages() {
     cover: "",
     title: "",
     location: "",
+    rating: "0",
     host: {},
     tags: [],
     pictures: [],
     equipments: [],
   })
 
+  const navigate = useNavigate()
+
   //Récupération des datas
   useEffect(() => {
     fetch(`http://localhost:3001/logements/${locationId}`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          throw new Error()
+        }
+      })
+
       .then((data) => setLogement(data))
-  }, [locationId])
+      .catch(() => {
+        navigate("/error")
+      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <DetailWrapper className={"detailWrapper"}>
@@ -156,7 +171,7 @@ function DetailPages() {
           <Collapse title="Équipements">
             <ul>
               {logement.equipments.map((e) => (
-                <li>{e}</li>
+                <li key={e}>{e}</li>
               ))}
             </ul>
           </Collapse>
